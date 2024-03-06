@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .Container {
+
+            font-family: Arial, Helvetica, sans-serif;
+            width: 600px;
+            margin: auto;
+            border: 1px solid black;
+        }
+
+        h1 {
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .Container .none {
+            border: none;
+            padding: 0;
+        }
+
+        nav {
+            border: 1px solid black;
+            display: flex;
+            padding: 10px;
+        }
+
+        nav li {
+            padding: 10px;
+            background-color: aqua;
+            list-style: none;
+            margin: auto;
+            border: 1px solid black;
+            transition: 2s;
+            width: 100px;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+        }
+
+        li:hover {
+            background-color: silver;
+            transition: 3s;
+        }
+
+        .imagen_text{
+        padding: 10px;
+        }
+
+        .imagen_text img{
+
+           float: left;
+           margin-right: 10px;
+           margin-bottom: 10px;
+        }
+
+        .imagen_text {
+           text-align: justify;
+            
+        }
+
+        .apart{
+            clear: left;
+        }
+
+        .listas_img {
+            background-image: url('img/fondo.jpg');
+            background-size: cover;
+            padding: 10px;
+        }
+
+        ol {
+            width: max-content;
+            margin: auto;
+        }
+
+        .point {
+            list-style-type: disc;
+        }
+
+        ul,
+        li {
+            list-style-type: decimal;
+        }
+
+        table {
+            margin: auto;
+            padding: 10px;
+        }
+
+        section,
+        a {
+            text-align: center;
+        }
+
+        table th,
+        td {
+            border: 2px solid;
+            padding: 5px;
+            width: 50px;
+            height: 30px;
+            border: 2px solid blue;
+        }
+        .azul{
+            color: blue;
+        }
+        .rojo{
+            color: red;
+        }
+        .azul, .rojo{
+            line-height: 30px;      
+        }
+
+        .texto_estilo{
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="Container">
+        <h1>EJERCICIO RECOPILATORIO</h1>
+
+        <nav>
+            <li><a href="tabla.html" target="_blank">Secciòn 1</a></li>
+            <li><a href="tabla.html" target="_blank">Secciòn 2</a></li>
+            <li><a href="tabla.html" target="_blank">Secciòn 3</a></li>
+            <li><a href="tabla.html" target="_blank">Secciòn 4</a></li>
+        </nav>
+
+        <div class="imagen_text">  
+          
+            <h1 class="none">SECCION 1: IMAGEN Y TEXTO ALREDEDOR</h1>
+            <img src="img/abstracto.jpg" width="50%">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda delectus expedita animi, esse nulla voluptates quasi quia culpa maxime. Reiciendis unde rem odit facilis expedita ea asperiores quas incidunt</p>
+            <p class="apart">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, quam facilis. Dolores, eaque non temporibus mollitia voluptate esse et unde ipsa commodi? Tempora molestiae, quis aliquid nesciunt doloribus perspiciatis fuga?</p>
+            
+        </div>
+
+        <div class="listas_img">
+            <h1 class="none">SECCION 2: LISTAS Y FONDOS</h1>
+            <ol>
+                <li class="point">Elemento 1</li>
+                <ul>
+                    <li>Subelemento 1.1</li>
+                    <li>Subelemento 1.1</li>
+                    <li>Subelemento 1.1</li>
+                </ul>
+
+                <li class="point">Elemento 2</li>
+                <ul>
+                    <li>Subelemento 2.1</li>
+                    <li>Subelemento 2.1</li>
+                    <li>Subelemento 2.1</li>
+                </ul>
+            </ol>
+        </div>
+
+        <div class="texto_estilo">
+            <h1 class="none">SECCION 3: TEXTO CON ESTILOS</h1>
+
+            <p><span class="azul">Este parrafo tiene un alto de linea de 30px y todo el es de color azul,</span> <span class="rojo">excepto esta frase que es de color rojo</span></p>
+
+            <p>Este segundo parrafo contiene alguna palabreja en cursiva <i>(como por ejemplo esta)</i> y alguna que otra en <b>negrita</b>
+            </p>
+
+            <p>En este tercer parrafo escribiremos una formula matematica: a|<sup>2</sup> y la formula del dioxido de
+                carbono: CO<sub>2</sub></p>
+
+            <p>En este parrafo tenemos un <s>texto tachado</s> y un texto <u>que acabamos de añadir</u></p>
+
+            <pre>Y este parrafo es un ejemplo de codigo: for (f=1; f<=10; f++)</pre>
+        </div>
+        <div>
+            <h1 class="none">SECCION 4: TABLAS Y ENLACE EXTERNO</h1>
+
+
+            <table>
+                <section><a href="https://www.google.com">Ir a google</a></section>
+                <tr>
+                    <th>Col 1</th>
+                    <th>Col 2</th>
+                    <th>Col 3</th>
+                </tr>
+                <tr>
+                    <td colspan="2">1.1</td>
+                    <td rowspan="3">1.2</td>
+                </tr>
+                <tr>
+                    <td>2.1</td>
+                    <td>2.2</td>
+                </tr>
+                <tr>
+                    <td>3.1</td>
+                    <td>3.2</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</body>
+
+</html>
