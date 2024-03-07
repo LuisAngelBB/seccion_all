@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        
+    </main>
+    <header></header>
+    <section class="resumen"></section>
+    <div class="contenido"></div>
+    <section class="escenas">
+
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+
+    </section>
+
+    <aside>
+
+        <div class="titulo"></div>
+        <div class="escena1"></div>
+        <div class="escena2"></div>
+        <div class="escena3"></div>
+    </aside>
+</body>
+</html>
