@@ -9,182 +9,117 @@
 </head>
 
 <body>
+    <iframe src="https://www.youtube.com/embed/UoSSbmD9vqc?autoplay=1&mute=1&controls=0&loop=1" title="Interstellar - Tráiler final en español HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen"></iframe>
     <main>
 
 
-    </main>
-    <header>
 
-        <h1>INTERSTELLAR</h1>
-        <img src="img/picture1.jpg" alt="">
+        <header>
 
-    </header>
-    <section class="resumen">
+            <h1>INTERSTELLAR</h1>
+            <img src="img/picture1.jpg" alt="">
 
-        <h3>Sinopsis</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae aliquid maiores rem harum accusamus
-            debitis omnis nihil laudantium? Quae dolores numquam reiciendis quidem quas minima distinctio saepe
-            dignissimos! Sit, dolorem.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit pariatur, asperiores praesentium aliquid ex
-            soluta laudantium atque voluptate illo quisquam architecto nostrum totam fugiat porro libero ipsum est
-            voluptatem perferendis?</p>
+        </header>
+        <nav>
+            <ol>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Escenas</a></li>
+                <li><a href="#">Reparto</a></li>
+                <li><a href="#">Creditos</a></li>
+                <li><a href="#">Reseñas</a></li>
+            </ol>
+        </nav>
+        <section class="resumen">
 
-    </section>
-    <div class="contenido">
-
-
-        <section class="escenas">
-
-            <article>
-                
-                <img src="img/media1.jpg">
-                <h3>Agujero negro</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi facere labore accusamus repellendus laborum quod, repellat neque mollitia voluptatum sint culpa esse perspiciatis deserunt minus minima saepe dolorem architecto illum?</p>
-            
-            </article>
-
-            <article>
-                <img src="img/media2.jpg">
-                <h3>TARS</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi facere labore accusamus repellendus laborum quod, repellat neque mollitia voluptatum sint culpa esse perspiciatis deserunt minus minima saepe dolorem architecto illum?</p>
-
-            </article>
-
-            <article>
-                <img src="img/media3.jpg">
-                <h3>Agujero negro</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi facere labore accusamus repellendus laborum quod, repellat neque mollitia voluptatum sint culpa esse perspiciatis deserunt minus minima saepe dolorem architecto illum?</p>
-            </article>
-
-            <article>
-                <img src="img/media4.jpg">
-                <h3>Agujero negro</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi facere labore accusamus repellendus laborum quod, repellat neque mollitia voluptatum sint culpa esse perspiciatis deserunt minus minima saepe dolorem architecto illum?</p>
-            </article>
-
-            <article>
-                <img src="img/media5.jpg">
-                <h3>Agujero negro</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi facere labore accusamus repellendus laborum quod, repellat neque mollitia voluptatum sint culpa esse perspiciatis deserunt minus minima saepe dolorem architecto illum?</p>
-            </article>
-
-            <article>
-                <img src="img/media6.jpg">
-                <h3>Agujero negro</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi facere labore accusamus repellendus laborum quod, repellat neque mollitia voluptatum sint culpa esse perspiciatis deserunt minus minima saepe dolorem architecto illum?</p>
-            </article>
+            <h3>Sinopsis</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae aliquid maiores rem harum accusamus
+                debitis omnis nihil laudantium? Quae dolores numquam reiciendis quidem quas minima distinctio saepe
+                dignissimos! Sit, dolorem.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit pariatur, asperiores praesentium aliquid ex
+                soluta laudantium atque voluptate illo quisquam architecto nostrum totam fugiat porro libero ipsum est
+                voluptatem perferendis?</p>
 
         </section>
+        <div class="contenido">
 
-        <aside>
 
-            <div class="titulo">
-                <h3>Otras escenas</h3>
-            </div>
-            <div class="escena1">
-                <h4>Garantia</h4>
-            </div>
-            <div class="escena2">
-                <h3>Endurance</h3>
-            </div>
-            <div class="escena3">
-                <h3>Protagonista</h3>
-            </div>
-        </aside>
-    </div>
+            <section class="escenas">
+
+                <article>
+                    <h4>Gargantùa</h4>
+                    <img src="img/media1.jpg">
+                    <h3>Agujero negro</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi facere labore accusamus
+                        repellendus laborum quod, repellat neque mollitia voluptatum sint culpa esse perspiciatis
+                        deserunt minus minima saepe dolorem architecto illum?</p>
+
+                </article>
+
+                <article>
+                    <h4>TARS</h4>
+                    <img src="img/media2.jpg">
+                    <h3>Tars</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi facere labore accusamus
+                        repellendus laborum quod, repellat neque mollitia voluptatum sint culpa esse perspiciatis
+                        deserunt minus minima saepe dolorem architecto illum?</p>
+
+                </article>
+
+                <article>
+                    <h4>Miller</h4>
+                    <img src="img/media3.jpg">
+                    <h3>Agujero negro</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi facere labore accusamus
+                        repellendus laborum quod, repellat neque mollitia voluptatum sint culpa esse perspiciatis
+                        deserunt minus minima saepe dolorem architecto illum?</p>
+                </article>
+
+                <article>
+                    <h4>Teseractor</h4>
+                    <img src="img/media4.jpg">
+                    <h3>Agujero negro</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi facere labore accusamus
+                        repellendus laborum quod, repellat neque mollitia voluptatum sint culpa esse perspiciatis
+                        deserunt minus minima saepe dolorem architecto illum?</p>
+                </article>
+
+                <article>
+                    <h4>Sidmunds</h4>
+                    <img src="img/media5.jpg">
+                    <h3>Agujero negro</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi facere labore accusamus
+                        repellendus laborum quod, repellat neque mollitia voluptatum sint culpa esse perspiciatis
+                        deserunt minus minima saepe dolorem architecto illum?</p>
+                </article>
+
+                <article>
+                    <h4>Mann</h4>
+                    <img src="img/media6.jpg">
+                    <h3>Agujero negro</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi facere labore accusamus
+                        repellendus laborum quod, repellat neque mollitia voluptatum sint culpa esse perspiciatis
+                        deserunt minus minima saepe dolorem architecto illum?</p>
+                </article>
+
+            </section>
+
+            <aside>
+
+                <div class="titulo">
+                    <h3>Otras escenas</h3>
+                </div>
+                <div class="escena1">
+                    <h4>Garantia</h4>
+                </div>
+                <div class="escena2">
+                    <h4>Endurance</h4>
+                </div>
+                <div class="escena3">
+                    <h4>Protagonista</h4>
+                </div>
+            </aside>
+        </div>
+    </main>
 </body>
 
 </html>
-
-
-*{
-    font-family: Arial, Helvetica, sans-serif; /*Tipo de letra para todo el documento*/
-    box-sizing: border-box; /*Para evitar que los padding y los border incrementen el ancho de las cajas*/
-}
-main{
-    width: 90%; /*Ancho de toda la pagina*/
-    margin: auto; /*Centrar la pagina*/
-    max-width: 1200px; /*Ancho maximo de la pagina para evitar la espaguetizacion del documento*/
-    background-color: blue;
-}
-
-header{
-    line-height: 0;}
-
-header img{
-    width: 100%;
-    display: block; /*Cambiamos el tipo display para eliminar el espaciado interlineal que tienen todos los elementos de tipo inline que provoca que la caja que esta situada debajo del header no quede pegada al header*/
-}
-
-.resumen{
-    background-color: lightgray;
-    /*border: 1px solid transparent; /*para evitar que el margin-top: por defecto de la etiqueta h3 aplique fuera de la caja;*/
-    padding: 10px; /*para evitar que el margin-top por defecto de la etiqueta h3 aplique fuera de la caja*/
-    /*overflow: hidden; */
-}
-
-/*Estilos para la seccion de sinopsis*/
-h3{
-    text-align: center; /*Centrar todos los titulos h3 de la pagina*/
-}
-
-/*Estilo para la seccion de contenido*/
-
-section.escenas{
-    width: 80%;
-    background-color: antiquewhite;
-    display: flex; /*Para activar el contenedor mltilinea*/
-    flex-wrap: wrap;
-    justify-content: space-between; /*Distribuir el espacio restante del 1% a derecha e izquierda de la caja central*/
-}
-
-aside{
-    width: 20%;
-    background-color: lightgreen;
-    border-left: 10px solid blue;
-}
-
-.contenido{
-    display: flex;
-}
-
-/*Estilos para los articulos*/
-article{
-    width: 33%;
-    border: 1px solid black;
-}
-
-article img{
-    width: 100%;
-    display: block;
-}
-article h3{
-    background-color: black;
-    margin-top: 0;
-    color: white;
-}
-article p{
-    padding: 5px; /*Margen interior del parrafo*/
-}
-
-.titulo h3{
-    background-color: black;
-    color: white;
-    padding: 10px;
-    margin: 0;
-    border-bottom: 10px solid blue;
-}
-.escena1{
-    background-image: url(../img/aside1.jpg);
-    height: 200px;
-    display: flex;
-    align-items: center;  /*Alineacion de los elementos en el eje vertical cuando en la caja contenedora hay un displey flex (por defectos los elementos se estiran hasta ocupar el 100% del alto de la caja contenedora)*/
-}
-
-aside h4{
-    background-color: black;
-    color: white;
-    text-align: center;
-    margin: 0;
-    width: 100%; /*Recuperar el ancho del 100*100 que se a perdido en cuanto hemos utlizado el display flex en la caja contenedora*/
-}
