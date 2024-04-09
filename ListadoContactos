@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        main {width: 60%; margin:auto}
+        input[type=text] {
+          text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h2>Listado de contactos</h2>
+        <br>
+        <form>
+            <input type="button" value="Añadir" onclick="nuevoContacto()">
+            <input type="text" id="nombre" placeholder="nombre">
+            <input type="text" id="apellido" placeholder="apellido">
+            <input type="text" id="telefono" placeholder="telefono">
+        </form>
+        <br>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Telefono</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              
+            </tbody>
+          </table>
+    </main>
+    <script src="js/28_scripts.js"></script>
+    <script src="duplicate.js"></script>
+</body>
+</html>
