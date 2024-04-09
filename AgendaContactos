@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <main>
+        <form id='formulario'>
+            <fieldset>
+                <legend>DATOS DEL CONTACTO</legend>
+                <div class="mb-3">
+                    <label class="form-label">Nif</label>
+                    <input type="text" class="form-control" id="nif" placeholder="nif" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Nombre y apellidos</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="nombre y apellidos" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="mail@dominio.ext" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Telefono</label>
+                    <input type="number" class="form-control" id="telefono" placeholder="123456789" required>
+                </div>
+                <button onclick="agregarContato()" type="button" class="btn btn-success">Nuevo contacto</button>
+            </fieldset>
+        </form>
+        <hr>
+        <h2 class='centrar'>Lista de contactos</h2>
+        <p class='centrar'>
+            <button onclick="vaciarLista('Vaciar')" type="button" class="btn btn-danger">Vaciar lista</button>
+        </p>
+        <div id="contactos">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Nif</th>
+                        <th scope="col">Nombre y apellidos</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Telefono</th>
+                    </tr>
+                </thead>
+                <tbody id='datoscontactos'></tbody>
+            </table>
+        </div>
+    </main>
+    <script src='js/scripts.js'></script>
+</body>
+
+</html>
