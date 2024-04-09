@@ -1,0 +1,141 @@
+// 1. crear un array de objetos
+
+// 1. realizar un array de objetos con unos cuantos contactos por defecto
+
+// let contact = [
+//   {
+//     nif: "Z1724564Q",
+//     nombre: "Carlos Riascos",
+//     telefono: "641119924",
+//     email: "Carlos123@hotmail.com",
+//   },
+//   {
+//     nif: "Y1429834X",
+//     nombre: "Oneill Barboza",
+//     telefono: "310591985",
+//     email: "Obarbozav@yahoo.com",
+//   },
+//   {
+//     nif: "U415382V",
+//     nombre: "Adelaida Becerra",
+//     telefono: "641119924",
+//     email: "adelabecerra@hotmail.es",
+//   },
+//   {
+//     nif: "Z1638163Q",
+//     nombre: "Luis Barboza",
+//     telefono: "641119924",
+//     email: "luisbecerra39@hotmail.com",
+//   },
+// ];
+   let contact = leerStorage();
+// 2. Ejecutar una funcion para que muestre los datos
+datosMostrados();
+// 3. confeccionar una funcion para mostrar los datos del array al html
+function datosMostrados() {
+  // 3.1 creamos una variable para que almacene cada una de las filas que correspondan a cada contacto
+  let listaFilasDatos = "";
+  // 3.2 recorrer el array con un bucle y, para cada iteracion, confeccionar las etiquetas <tr></tr> y <td></td> para cada contanto y guardarlas en la variable que a sido creada antes
+  contact.forEach((listasContancto, nif) => {
+    listaFilasDatos += `<tr>`;
+    listaFilasDatos += `<td>${listasContancto.nif}</td>`;
+    listaFilasDatos += `<td>${listasContancto.nombre}</td>`;
+    listaFilasDatos += `<td>${listasContancto.email}</td>`;
+    listaFilasDatos += `<td>${listasContancto.telefono}</td>`;
+    listaFilasDatos += `<td><button onclick="borrarContacto(${nif})">Eliminar</button></td>`;
+    // listasContancto += `<td><button class="btn btn-danger" onclick="editarContacto(${})">Editar</button></td>`
+    listaFilasDatos += `</tr>`;
+  });
+
+  // 3.3 enviar el contenido de la variable al documento de la variable utilizando innerhtml
+  document.querySelector("tbody").innerHTML = listaFilasDatos;
+}
+
+function agregarContato() {
+  // 1. recuperar los valores de los input formulario para sanearlos
+  let nif = document.querySelector("#nif").value.trim();
+  let nombre = document.querySelector("#nombre").value.trim();
+  let email = document.querySelector("#email").value.trim();
+  let telefono = document.querySelector("#telefono").value.trim();
+  // 2. validar los nombres y apellidos: obligatorios, de tipo texto, nombre y apellidos unicos
+  if (nif == "" || nombre == "" || email == "" || telefono == "") {
+    window.alert("nif, nombre, telefono y email son obligatorios");
+    return;
+  }
+
+  if (!isNaN(nombre)) {
+    window.alert("nombre no puede contener numeros");
+    return;
+  }
+  // con find busca dentro del array para identificar el primer objeto que coincida con los criterios de busqueda. Si no exite ninguno nos devuelve undefined
+  let identificador = contact.find(function (listasContancto) {
+    return (
+      listasContancto.nif == nif &&
+      listasContancto.nombre == nombre &&
+      listasContancto.email == email &&
+      listasContancto.telefono == telefono
+    );
+  });
+
+  if (identificador) {
+    window.alert("Este contacto ya a sido creado");
+    return;
+  }
+
+  // 3.1 añadir el nuevo contacto al array
+  contact.push({
+    nif: nif,
+    nombre: nombre,
+    email: email,
+    telefono: telefono,
+  });
+  // 3.2 guardar el array en el local storage
+  guardarStorage()
+  // 4. Reconstruir la tabla de contactos
+  datosMostrados();
+  // 5. informar al usuario del alta del nuevo contacto
+  window.alert("Nuevo contacto a sido creado");
+}
+// 6. borrar el contacto del array
+function borrarContacto(i) {
+  contact.splice(i, 1);
+
+  // 7. guardar el array en el local storage
+  guardarStorage()
+  // 8. reconstruir la tabla de consulta de contactos en la pantalla
+  datosMostrados();
+  // 9. Informar al usuario de la baja del contacto
+  window.alert("El contacto a sido eliminado");
+}
+
+function vaciarLista(v) {
+  // CREAR UNA NUEVA FUNCION PARA QUE BORRE LOS DATOS DEL ARRAY en el html
+  contact.splice(v, contact.length);
+
+  // GUARDAR EL ARRAY EN EL LOCAL STORAGE
+  guardarStorage()
+  // RECONSTRUIR LA TABLA CON LOS DATOS YA ELIMINADOS
+  datosMostrados();
+  // INFORMAR AL USUARIO QUE LA TABLA A SIDO LIMPIADA
+  window.alert("Todos los datos han sido eliminados");
+}
+
+// 10. para poder utilizar el storage con un array de objetos tenemos que convertir éste a formato texto y, más concretamente a formato JSON (JavaScript Object Notation)
+function guardarStorage() {
+  // 11. leer el storage de contactos
+  let contactJSON = JSON.stringify(contact);
+
+  localStorage.setItem("contact", contactJSON);
+}
+
+function leerStorage(){
+// 12. retornamos el contenido del storage, que esta en formato JSON, convertido a array de objetos
+    let contactJSON = localStorage.getItem("contact");
+
+    if(contactJSON){
+      return JSON.parse(contactJSON)
+    }else {
+// 13. si el storage no existe, retornamos un array vacio
+      return[]
+    }
+}
