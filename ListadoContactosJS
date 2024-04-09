@@ -1,0 +1,119 @@
+//1. crear un array de objetos con unos cuantos contactos por defecto
+/*
+let contactos = [
+    {
+        nombre: 'Luca',
+        apellidos: 'Brasi'
+    },
+    {
+        nombre: 'Apollonia',
+        apellidos: 'Corleone'
+    }
+]
+*/
+
+//1. crear un array con los contactos que tengamos guardados en el local storage
+let contactos = leerStorage();
+
+//2. Ejecutar la función para mostrar los datos
+mostrarContactos();
+
+//3. Confeccionar una función para mostrar los contactos del array en el documento html
+function mostrarContactos() {
+  //3.1. Crear una variable vacia para almacenar cada una de las filas que correspondan a cada contacto
+  let filasTabla = "";
+
+  //3.2. Recorrer el array con un bucle y, para cada iteracion, confeccionar las etiquetas <tr> y <td> para cada contacto y guardarlas en la variable que hemos creado antes
+  contactos.forEach((contacto, indice) => {
+    filasTabla += `<tr>`;
+    filasTabla += `<td>${indice}</td>`;
+    filasTabla += `<td>${contacto.nombre}</td>`;
+    filasTabla += `<td>${contacto.apellidos}</td>`;
+    filasTabla += `<td><button onclick="eliminarContacto(${indice})">Eliminar</button></td>`;
+    filasTabla += `</tr>`;
+  });
+
+  //3.3 enviar el contenido de la varaible al documento html (innerHTML o inserAdjacentHtml)
+  document.querySelector("tbody").innerHTML = filasTabla;
+}
+
+function nuevoContacto() {
+  //1. Recuperar los valores de los input del formulario y sanearlos
+  let nombre = document.querySelector("#nombre").value.trim();
+  let apellidos = document.querySelector("#apellidos").value.trim();
+
+  //2. validar nombre y apellidos: obligatorios, de tipo texto, nombre y apellidos unicos
+  if (nombre == "" || apellidos == "") {
+    window.alert("Nombre y apellidos son obligatorios");
+    return;
+  }
+
+  if (!isNaN(nombre) || !isNaN(apellidos)) {
+    window.alert("Nombre y apellidos no pueden ser números");
+    return;
+  }
+
+  //con find busca dentro del array el primer objeto que coincida con los criterios de búsqueda. SI no existe ninguno nos devuelve undefined
+  let encontrado = contactos.find(function (contacto) {
+    return contacto.nombre == nombre && contacto.apellidos == apellidos;
+  });
+
+  if (encontrado) {
+    window.alert("Este contacto ya existe");
+    return;
+  }
+
+  //3.1 añadir el nuevo contacto al array
+  contactos.push({
+    nombre: nombre,
+    apellidos: apellidos,
+  });
+
+  //3.2 guardar el array en el local storage
+  guardarStorage();
+
+  //4. reconstruir la tabla de contactos
+  mostrarContactos();
+
+  //5. informar al usuario del alta del nuevo contacto
+  window.alert("Alta de contacto efectuada");
+}
+
+function eliminarContacto(i) {
+  //borrar el contacto del array
+  contactos.splice(i, 1);
+
+  //guardar el array en el storage
+  guardarStorage();
+
+  //reconstruir la tabla de consulta de contactos en la pantalla
+  mostrarContactos();
+
+  //informar al usuario de la baja del contacto
+  window.alert("Se ha eliminado el contacto");
+}
+
+function guardarStorage() {
+  //para poder utilizar el storage con un array de objetos tenemos que convertir éste a formato texto y, más concretamente a formato JSON (JavaScript Object Notation)
+  let contactosJSON = JSON.stringify(contactos);
+  //console.log(typeof(contactos))
+  //console.log(typeof(contactosJSON))
+  /*
+    [{"nombre":"Luca","apellidos":"Brasi"},{"nombre":"Apollonia","apellidos":"Corleone"},{"nombre":"aaaaa","apellidos":"bbbbb"}]
+    */
+
+  localStorage.setItem("contactos", contactosJSON);
+}
+
+function leerStorage() {
+  //leer el storage de contactos
+  let contactosJSON = localStorage.getItem("contactos");
+
+  if (contactosJSON) {
+    //retornamos el contenido del storage, que está en formato JSON, convertido a formato array de objetos
+    return JSON.parse(contactosJSON);
+  } else {
+    //si el storage no existe retornamos un array vacio
+    return [];
+  }
+}
